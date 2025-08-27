@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Drawn by Grayson - Custom Hand-Drawn Portraits</title>
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P59GC9R4');</script>
+    <!-- End Google Tag Manager -->
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NQKM0LJGLN"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-NQKM0LJGLN');
+    </script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17350985402">
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-17350985402');
+    </script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif']
+                    },
+                    colors: {
+                        'apple-gray': {
+                            50: '#f9fafb',
+                            100: '#f3f4f6',
+                            200: '#e5e7eb',
+                            300: '#d1d5db',
+                            400: '#9ca3af',
+                            500: '#6b7280',
+                            600: '#4b5563',
+                            700: '#374151',
+                            800: '#1f2937',
+                            900: '#111827'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Recoleta Alt Font Family */
+        @font-face {
+            font-family: 'Recoleta Alt';
+            src: url('{{ url_for("static", filename="fonts/RecoletaAlt-SemiBold.woff2") }}') format('woff2'),
+                 url('{{ url_for("static", filename="fonts/RecoletaAlt-SemiBold.woff") }}') format('woff');
+            font-weight: 600;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        .recoleta-font {
+            font-family: 'Recoleta Alt', serif;
+        }
+
+        /* 3D Button Styles */
+        .order-button {
+            border: none;
+            background: transparent;
+            padding: 0;
+            cursor: pointer;
+            transition: all 0.1s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .order-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .order-button:active {
+            transform: translateY(2px);
+        }
+
+        .button_top {
+            display: block;
+            box-sizing: border-box;
+            border: 2px solid #000;
+            border-radius: 12px;
+            padding: 0.75em 1.5em;
+            background: #f0f0f0;
+            color: #000;
+            transform: translateY(-0.2em);
+            transition: transform 0.1s ease;
+            font-weight: 600;
+        }
+
+        .order-button:hover .button_top {
+            transform: translateY(-0.33em);
+        }
+
+        .order-button:active .button_top {
+            transform: translateY(0);
+        }
+
+        /* FAQ styles */
+        .faq-answer {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            padding-top: 0;
+            padding-bottom: 0;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                        opacity 0.3s ease-out,
+                        padding 0.3s ease-out;
+        }
+
+        /* Portfolio styles */
+        .portfolio-item img {
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="font-sans bg-white text-apple-gray-900 antialiased">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P59GC9R4"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Hero Section with Background Container -->
+    <div class="bg-white py-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="rounded-3xl p-8 md:p-12 relative overflow-hidden" style="background-color: #f2ede9;">
+                <!-- Wave Background Pattern -->
+                <div class="absolute inset-0 opacity-10">
+                    <svg class="absolute bottom-0 left-0 w-full h-full" viewBox="0 0 1200 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0,400 C300,350 600,450 900,380 C1050,340 1150,360 1200,340 L1200,600 L0,600 Z" fill="url(#wave-gradient)" opacity="0.3"/>
+                        <path d="M0,450 C250,400 500,500 800,430 C950,390 1100,410 1200,390 L1200,600 L0,600 Z" fill="url(#wave-gradient)" opacity="0.2"/>
+                        <defs>
+                            <linearGradient id="wave-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#6b7280;stop-opacity:0.8" />
+                                <stop offset="100%" style="stop-color:#9ca3af;stop-opacity:0.4" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                
+                <!-- Content wrapper to ensure it's above the wave -->
+                <div class="relative z-10">
+                <!-- Grayson's Photo -->
+                <div class="text-center mb-6">
+                    <img src="{{ url_for('static', filename='images/graysmall_1756137222909.png') }}" alt="Grayson" class="mx-auto w-80 h-80 rounded-full object-cover">
+                </div>
+                
+                <!-- Navigation/Logo -->
+                <div class="text-center mb-8">
+                    <img src="{{ url_for('static', filename='images/logo_1756136686404.png') }}" alt="Drawn by Grayson" class="mx-auto w-64 sm:w-72 md:w-80 max-w-full h-auto">
+                </div>
+
+                <!-- Main Hero Content -->
+                <div class="max-w-4xl mx-auto">
+
+
+            <!-- Hero Header -->
+            <div class="text-center mb-16">
+                <h1 id="main-heading" class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-tight mb-4 recoleta-font tracking-tight">
+                    Get a One-of-a-Kind Portrait,<br>Hand-Drawn by Grayson (Age 11)
+                </h1>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 recoleta-font mb-8">
+                    Watch how Grayson creates amazing custom portraits just for you.
+                </h2>
+                <div id="main-subtitle" class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed font-medium">
+                    Send a photo, get a hand-drawn portrait that's totally unique — just £9.99
+                </div>
+                
+                <!-- Wistia Video -->
+                <div class="mb-8">
+                    <script src="https://fast.wistia.com/player.js" async></script>
+                    <script src="https://fast.wistia.com/embed/rd0u4q9ul5.js" async type="module"></script>
+                    <style>
+                        wistia-player[media-id='rd0u4q9ul5']:not(:defined) { 
+                            background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/rd0u4q9ul5/swatch'); 
+                            display: block; 
+                            filter: blur(5px); 
+                            padding-top:56.25%; 
+                        }
+                    </style>
+                    <wistia-player media-id="rd0u4q9ul5" aspect="1.7777777777777777"></wistia-player>
+                </div>
+
+                <!-- Order Button Under Video -->
+                <div class="text-center mb-8">
+                    <a href="https://buymeacoffee.com/graysonmichalak/e/450290" target="_blank" class="order-button text-xl inline-block">
+                        <span class="button_top">ORDER YOUR PORTRAIT</span>
+                    </a>
+                </div>
+
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Examples Section -->
+    <div class="bg-white py-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="rounded-3xl p-8 md:p-12 relative overflow-hidden" style="background-color: #f2ede9;">
+                <!-- Section Title -->
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 recoleta-font">Some examples of my work</h2>
+                </div>
+                
+                <!-- Portfolio Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="text-center">
+                        <img src="{{ url_for('static', filename='images/1_1756142526849.jpg') }}" alt="Portrait example 1" class="w-full rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    </div>
+                    <div class="text-center">
+                        <img src="{{ url_for('static', filename='images/2_1756142526848.jpg') }}" alt="Portrait example 2" class="w-full rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    </div>
+                    <div class="text-center">
+                        <img src="{{ url_for('static', filename='images/3_1756142526848.jpg') }}" alt="Portrait example 3" class="w-full rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    </div>
+                    <div class="text-center">
+                        <img src="{{ url_for('static', filename='images/4_1756142526846.jpg') }}" alt="Portrait example 4" class="w-full rounded-lg shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="bg-white py-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="rounded-3xl p-8 md:p-12 relative overflow-hidden" style="background-color: #f2ede9;">
+                <!-- Section Title -->
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 recoleta-font">Frequently Asked Questions</h2>
+                </div>
+                
+                <!-- FAQ Items -->
+                <div class="space-y-4">
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200">
+                        <button class="w-full text-left p-6 focus:outline-none" onclick="toggleFaq(0)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold text-gray-900">Who's drawing my portrait?</h3>
+                                <span class="faq-icon text-2xl text-gray-500">+</span>
+                            </div>
+                        </button>
+                        <div class="faq-answer px-6 pb-6">
+                            <p class="text-gray-600">Me! Grayson. I love drawing and I'll be the one making your picture. No AI, no tracing — just me and my pencils.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200">
+                        <button class="w-full text-left p-6 focus:outline-none" onclick="toggleFaq(1)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold text-gray-900">How does it work?</h3>
+                                <span class="faq-icon text-2xl text-gray-500">+</span>
+                            </div>
+                        </button>
+                        <div class="faq-answer px-6 pb-6">
+                            <p class="text-gray-600">You send me a photo (of you or whoever you want me to draw). Then I sit down, draw it by hand, and we send you the finished portrait as a digital file.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200">
+                        <button class="w-full text-left p-6 focus:outline-none" onclick="toggleFaq(2)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold text-gray-900">Do I get a real paper drawing?</h3>
+                                <span class="faq-icon text-2xl text-gray-500">+</span>
+                            </div>
+                        </button>
+                        <div class="faq-answer px-6 pb-6">
+                            <p class="text-gray-600">Nope, I send it to you as a digital copy (on your computer/phone). But the good thing is you can print it out as many times as you want — stick it on your wall, fridge, or even your school folder if you're cool like that.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200">
+                        <button class="w-full text-left p-6 focus:outline-none" onclick="toggleFaq(3)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold text-gray-900">Who owns the picture once I get it?</h3>
+                                <span class="faq-icon text-2xl text-gray-500">+</span>
+                            </div>
+                        </button>
+                        <div class="faq-answer px-6 pb-6">
+                            <p class="text-gray-600">You do! You get full copyright, which means it's yours forever. You can print it, share it, or even put it on a mug if you want and I won't sue you.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200">
+                        <button class="w-full text-left p-6 focus:outline-none" onclick="toggleFaq(4)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold text-gray-900">What will it look like?</h3>
+                                <span class="faq-icon text-2xl text-gray-500">+</span>
+                            </div>
+                        </button>
+                        <div class="faq-answer px-6 pb-6">
+                            <p class="text-gray-600">It's not going to be like a boring school photo. It'll look like my favourite artist drew it, David Shrigley but a bit better. Every single one is different.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200">
+                        <button class="w-full text-left p-6 focus:outline-none" onclick="toggleFaq(5)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold text-gray-900">How much does it cost?</h3>
+                                <span class="faq-icon text-2xl text-gray-500">+</span>
+                            </div>
+                        </button>
+                        <div class="faq-answer px-6 pb-6">
+                            <p class="text-gray-600">£9.99. Which is basically less than two trips to Starbucks (according to my mum).</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200">
+                        <button class="w-full text-left p-6 focus:outline-none" onclick="toggleFaq(6)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold text-gray-900">How long does it take?</h3>
+                                <span class="faq-icon text-2xl text-gray-500">+</span>
+                            </div>
+                        </button>
+                        <div class="faq-answer px-6 pb-6">
+                            <p class="text-gray-600">I usually finish in a couple of days, unless my homework pile is massive. Then it might take a little longer.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200">
+                        <button class="w-full text-left p-6 focus:outline-none" onclick="toggleFaq(7)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold text-gray-900">Can I get more than one?</h3>
+                                <span class="faq-icon text-2xl text-gray-500">+</span>
+                            </div>
+                        </button>
+                        <div class="faq-answer px-6 pb-6">
+                            <p class="text-gray-600">Yep! You can order as many as you like. Friends, family, pets — I'll draw them all.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200">
+                        <button class="w-full text-left p-6 focus:outline-none" onclick="toggleFaq(8)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="text-lg font-semibold text-gray-900">Can you make me look like a superhero?</h3>
+                                <span class="faq-icon text-2xl text-gray-500">+</span>
+                            </div>
+                        </button>
+                        <div class="faq-answer px-6 pb-6">
+                            <p class="text-gray-600">Sure, but you have to tell me in the notes. Otherwise, you'll just look like… you.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Button Section -->
+    <div class="bg-white py-12">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="rounded-3xl p-8 md:p-12 relative overflow-hidden" style="background-color: #f2ede9;">
+                <div class="text-center">
+                    <a href="https://buymeacoffee.com/graysonmichalak/e/450290" target="_blank" class="order-button text-2xl md:text-3xl">
+                        <span class="button_top">ORDER YOUR PORTRAIT NOW</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Note from Dad Section -->
+    <div class="bg-gray-50 py-12">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-gray-100">
+                <h2 class="text-2xl md:text-3xl font-bold text-gray-900 recoleta-font mb-6 text-center">A Note from Dad:</h2>
+                <div class="prose prose-lg max-w-none">
+                    <p class="text-gray-700 leading-relaxed text-lg">
+                        This project is my way of teaching Grayson the ropes of entrepreneurship.<br><br>
+                        We're treating it like a real startup, working side by side on everything from building the website to writing the script for his video sales letter and handling customer orders.<br><br>
+                        It's hands-on business training at age 11, and every sale helps him understand how ideas turn into income.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- FAQ JavaScript -->
+    <script>
+        function toggleFaq(index) {
+            const faqItems = document.querySelectorAll('.faq-answer');
+            const faqIcons = document.querySelectorAll('.faq-icon');
+            const currentAnswer = faqItems[index];
+            const currentIcon = faqIcons[index];
+            
+            const isOpen = currentAnswer.style.maxHeight && currentAnswer.style.maxHeight !== '0px';
+            
+            if (isOpen) {
+                currentAnswer.style.maxHeight = '0px';
+                currentAnswer.style.opacity = '0';
+                currentAnswer.style.paddingTop = '0';
+                currentAnswer.style.paddingBottom = '0';
+                currentIcon.textContent = '+';
+            } else {
+                currentAnswer.style.maxHeight = currentAnswer.scrollHeight + 'px';
+                currentAnswer.style.opacity = '1';
+                currentAnswer.style.paddingTop = '0';
+                currentAnswer.style.paddingBottom = '1.5rem';
+                currentIcon.textContent = '−';
+            }
+        }
+
+        // Initialize all FAQ items as closed
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-answer');
+            faqItems.forEach(item => {
+                item.style.maxHeight = '0px';
+                item.style.opacity = '0';
+                item.style.paddingTop = '0';
+                item.style.paddingBottom = '0';
+            });
+        });
+    </script>
+
+</body>
+</html>
